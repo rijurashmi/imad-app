@@ -5,22 +5,49 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var articleOne ={
-    title:'Article One | Riju',
-    heading: 'Article One',
-    date: '3rd Aug, 2017',
-    content: `
-            <p>
-                Hi!! This is the first article that I am putting up on the site.
-                Its cool to learn web app development. Thanks to this course.
-            </p>
-            <p>
-                Hope I am able to use it for developing some interesting apps.
-            </p>
-            <p>
-                Thank You!
-            </p>`
+var articles ={
+    'article-one': {
+        title:'Article One | Riju',
+        heading: 'Article One',
+        date: '3rd Aug, 2017',
+        content: `
+                <p>
+                    Hi!! This is the first article that I am putting up on the site.
+                    Its cool to learn web app development. Thanks to this course.
+                </p>
+                <p>
+                    Hope I am able to use it for developing some interesting apps.
+                </p>
+                <p>
+                    Thank You!
+                </p>`
+        },
+    'article-two': {
+        title:'Article Two | Riju',
+        heading: 'Article Two',
+        date: '5th Aug, 2017',
+        content: `
+                <p>
+                    Hi!! This is the second article.
+                </p>
+                <p>
+                    Thank You!
+                </p>`
+        },
+    'article-three': {
+        title:'Article Three | Riju',
+        heading: 'Article Three',
+        date: '6th Aug, 2017',
+        content: `
+                <p>
+                    Hi!! This is the third article that I am putting up on the site.
+                </p>
+                <p>
+                    Bye!
+                </p>`
+        }
 };
+
 
 function createTemplate(data){
     var title = data.title;
@@ -64,17 +91,20 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/article-one', function(req,res){
-   res.send(createTemplate(articleOne)); 
+app.get('/:articleName', function(req,res){
+   // articleName == article-one
+   // articles[articleName] == {} content object for article one
+   var articleName = req.params.articleName;
+   res.send(createTemplate(articles[articleName])); 
 });
 
-app.get('/article-two', function(req,res){
+/*app.get('/article-two', function(req,res){
     res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
 });
 
 app.get('/article-three', function(req,res){
     res.sendFile(path.join(__dirname, 'ui', 'article-three.html'));
-});
+});*/
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
