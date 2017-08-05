@@ -10,16 +10,16 @@ var articleOne ={
     heading: 'Article One',
     date: '3rd Aug, 2017',
     content: `
-                <p>
-                    Hi!! This is the first article that I am putting up on the site.
-                    Its cool to learn web app development. Thanks to this course.
-                </p>
-                <p>
-                    Hope I am able to use it for developing some interesting apps.
-                </p>
-                <p>
-                    Thank You!
-                </p>`
+            <p>
+                Hi!! This is the first article that I am putting up on the site.
+                Its cool to learn web app development. Thanks to this course.
+            </p>
+            <p>
+                Hope I am able to use it for developing some interesting apps.
+            </p>
+            <p>
+                Thank You!
+            </p>`
 };
 
 function createTemplate(data){
