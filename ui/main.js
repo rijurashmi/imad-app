@@ -28,6 +28,8 @@ button.onclick = function(){
     
     // make a request to the counter endpoint
     var request = new XMLHttpRequest();
+    
+    // Capture the response and store it in a variable
     request.onreadystatechange = function(){
         if(request.resdyState === XMLHttyRequest.DONE){
             // Take some action
@@ -41,11 +43,4 @@ button.onclick = function(){
         
     };
     
-    // Capture the response and store it in a variable
-    
-    
-    // Render the variable in the correct span
-    //counter = counter + 1;
-    //var span = document.getElementById("count");
-    //span.innerHTML = counter.toString();
 };
