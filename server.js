@@ -91,14 +91,6 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-
-var counter = 0;
-app.get('/counter', function(req,res){
-    counter = counter + 1;
-    res.send(counter.toString());
-});
-
-
 var names=[];
 app.get('/submit-name/:name', function (req,res) { // URL : /submit-name?name=xxxxx
     // Get the name from the request
@@ -109,6 +101,15 @@ app.get('/submit-name/:name', function (req,res) { // URL : /submit-name?name=xx
     //JSON: Java Object Notation
     res.send(JSON.stringify(names));
 });
+
+
+var counter = 0;
+app.get('/counter', function(req,res){
+    counter = counter + 1;
+    res.send(counter.toString());
+});
+
+
 
 
 app.get('/:articleName', function(req,res){
