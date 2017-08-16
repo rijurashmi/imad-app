@@ -92,7 +92,7 @@ function createTemplate(data){
             </div>
         </body>
     </html>
-    ';
+    `;
     
     return htmlTemplate;
 }
