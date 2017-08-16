@@ -124,7 +124,7 @@ app.get('/counter', function(req,res){
 });
 
 
-var names=[];
+/*var names=[];
 app.get('/submit-name', function (req,res) { // URL : /submit-name?name=xxxxx
     // Get the name from the request
     var name = req.query.name; 
@@ -133,7 +133,7 @@ app.get('/submit-name', function (req,res) { // URL : /submit-name?name=xxxxx
     
     //JSON: Java Object Notation
     res.send(JSON.stringify(names));
-});
+});*/
 
 app.get('/articles/:articleName', function(req,res){
    // articleName == article-one
