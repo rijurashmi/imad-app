@@ -107,17 +107,16 @@ app.get('/', function (req, res) {
 
 function hash(input, salt){
     
-    alert('test');
     // How do we create the hash
     var hashed = crypto.pbkdf2Sync(input, salt, 10000, 512, 'sha512');
-    return hashed,toString('hex');
+    return hashed.toString('hex');
 }
 
 app.get('/hash/:input', function(req,res) {
     
     //res.send('here');
     var hashedString = hash(req.params.input,'this-is-some-random-string');
-    res.send('there');
+    //res.send('there');
     res.send(hashedString);
     
 });
