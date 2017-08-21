@@ -84,10 +84,10 @@ app.post('/create-user', function(req, res){
     // username,password
     // {"username": "riju", "password": "password"}
     // JSON
-    //res.send('here');
+    res.send('here');
     
     
-   /* var username = req.body.username;
+    var username = req.body.username;
     var password = req.body.password;
     
     var salt = crypto.randomBytes(128).toString('hex');
@@ -101,7 +101,7 @@ app.post('/create-user', function(req, res){
        else{
            res.send('User successfully created : ' + username);
        }
-    });*/
+    });
 }); 
 
 
