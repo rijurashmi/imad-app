@@ -22,49 +22,6 @@ app.use(morgan('combined'));
 
 app.use(bodyParser.json());
 
-/*var articles ={
-    'article-one': {
-        title:'Article One | Riju',
-        heading: 'Article One',
-        date: '3rd Aug, 2017',
-        content: `
-                <p>
-                    Hi!! This is the first article that I am putting up on the site.
-                    Its cool to learn web app development. Thanks to this course.
-                </p>
-                <p>
-                    Hope I am able to use it for developing some interesting apps.
-                </p>
-                <p>
-                    Thank You!
-                </p>`
-        },
-    'article-two': {
-        title:'Article Two | Riju',
-        heading: 'Article Two',
-        date: '5th Aug, 2017',
-        content: `
-                <p>
-                    Hi!! This is the second article.
-                </p>
-                <p>
-                    Thank You!
-                </p>`
-        },
-    'article-three': {
-        title:'Article Three | Riju',
-        heading: 'Article Three',
-        date: '6th Aug, 2017',
-        content: `
-                <p>
-                    Hi!! This is the third article that I am putting up on the site.
-                </p>
-                <p>
-                    Bye!
-                </p>`
-        }
-};*/
-
 
 function createTemplate(data){
     var title = data.title;
@@ -126,6 +83,7 @@ app.get('/hash/:input', function(req,res) {
 
 app.post('/create-user',function(req, res){
     // username,password
+    // {"username": "riju", "password": "password"}
     // JSON
     var username = req.body.username;
     var password = req.body.password;
