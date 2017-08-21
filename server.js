@@ -75,7 +75,7 @@ function hash(input, salt){
 
 app.get('/hash/:input', function(req,res) {
     
-    //res.send('here');
+    res.send('here');
     var hashedString = hash(req.params.input,'this-is-some-random-string');
     res.send(hashedString);
     
@@ -85,7 +85,7 @@ app.post('/create-user', function(req, res){
     // username,password
     // {"username": "riju", "password": "password"}
     // JSON
-    res.send('here');
+    //res.send('here');
     var username = req.body.username;
     var password = req.body.password;
     
