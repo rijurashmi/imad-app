@@ -7,7 +7,7 @@ var Pool = require('pg').Pool;
 // For hashing
 var crypto = require('crypto');
 
-var bosyParser = require('body-parser');
+var bodyParser = require('body-parser');
 
 var config = {
     user: 'rijurashmi',
