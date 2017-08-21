@@ -84,7 +84,7 @@ app.post('/create-user', function(req, res){
     // username,password
     // {"username": "riju", "password": "password"}
     // JSON
-    res.send('here');
+    //res.send('here');
     
     
    /* var username = req.body.username;
