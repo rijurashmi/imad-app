@@ -100,8 +100,8 @@ app.post('/create-user', function(req, res){
        }
        else{
            res.send('User successfully created : ' + username);
-       }*/
-    });
+       }
+    });*/
 }); 
 
 
